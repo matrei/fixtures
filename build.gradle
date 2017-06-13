@@ -12,7 +12,7 @@ buildscript {
     }
 }
 
-version "2.0.2"
+version "2.0.3"
 group "org.grails.plugins"
 
 apply plugin:"eclipse"
@@ -37,6 +37,11 @@ dependencyManagement {
         mavenBom "org.grails:grails-bom:$grailsVersion"
     }
     applyMavenExclusions false
+}
+
+bintray {
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_KEY')
 }
 
 dependencies {
