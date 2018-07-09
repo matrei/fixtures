@@ -42,7 +42,7 @@ class FixtureBeanPostProcessor implements BeanPostProcessor {
 		def shouldSave = processDomainInstance(bean, log)
 
 		if (domainClass && shouldSave) {
-			bean.save(flush: true, failOnError: true)
+			bean.save(flush: true, failOnError: true, deepValidate:false)
 		}
 		else {
 			log.info("not saving fixture bean $beanName")
@@ -84,7 +84,7 @@ class FixtureBeanPostProcessor implements BeanPostProcessor {
 						instance."addTo${MetaClassHelper.capitalize(p.name)}"(associate)
 						if (!owningSide) {
 							log.debug("saving $associate (owning side)")
-							associate.save(flush: true, failOnError: true)
+							associate.save(flush: true, failOnError: true, deepValidate:false)
 							associate.refresh()
 						}
 					}
@@ -104,7 +104,7 @@ class FixtureBeanPostProcessor implements BeanPostProcessor {
 							log.debug("Setting $otherSideName on $value")
 							value."$otherSideName" = instance
 						}
-						value.save(flush: true, failOnError: true)
+						value.save(flush: true, failOnError: true, deepValidate:false)
 						value.refresh()
 					}
 				}
