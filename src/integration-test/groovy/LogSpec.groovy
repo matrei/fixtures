@@ -1,8 +1,7 @@
 import spock.lang.*
-import grails.test.mixin.integration.IntegrationTestMixin
-import grails.test.mixin.*
+import grails.testing.mixin.integration.Integration
 
-@TestMixin(IntegrationTestMixin)
+@Integration
 @Ignore
 class LogSpec extends Specification {
 

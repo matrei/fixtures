@@ -14,7 +14,7 @@ dataSource:
     password:
 ---
 grails:
-    profile: web-plugin
+    profile: plugin
     codegen:
         defaultPackage: fixtures.new
     spring:

@@ -1,6 +1,6 @@
 import test.enums.UsesEnum
 import test.enums.UsesEnumEnum
-import grails.test.mixin.integration.Integration
+import grails.testing.mixin.integration.Integration
 import grails.transaction.Rollback
 import spock.lang.*
 

@@ -1,9 +1,8 @@
-package optionalowner
+package test.optionalowner
 
-import grails.test.mixin.integration.Integration
+import grails.testing.mixin.integration.Integration
 import grails.transaction.Rollback
 import spock.lang.*
-import test.optionalowner.OptionallyOwnedThing
 
 @Integration
 @Rollback
