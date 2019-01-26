@@ -47,11 +47,11 @@ task wrapper(type: Wrapper) {
     gradleVersion = gradleWrapperVersion
 }
 grailsPublish {
-    githubSlug = 'gpc/grails-fixtures'
+    githubSlug = 'purple-raven/fixtures'
     license {
         name = 'Apache-2.0'
     }
-    title = "Grails Fixtures Plugin"
+    title = "Grails 3 Fixtures Plugin"
     desc = "Load complex domain data via a simple DSL"
     developers = ["Grails Plugin Collective":"grails.plugin.collective@gmail.com"]
     portalUser = ""
