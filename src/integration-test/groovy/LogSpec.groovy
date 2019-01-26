@@ -1,5 +1,5 @@
-import spock.lang.*
 import grails.testing.mixin.integration.Integration
+import spock.lang.*
 
 @Integration
 @Ignore

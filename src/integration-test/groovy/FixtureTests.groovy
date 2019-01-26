@@ -20,7 +20,7 @@ import grails.plugin.fixtures.exception.UnsatisfiedBeanDefinitionRequirementExce
 import grails.plugin.fixtures.exception.UnsatisfiedBeanRequirementException
 import grails.plugin.fixtures.exception.UnsatisfiedFixtureRequirementException
 import grails.testing.mixin.integration.Integration
-import grails.transaction.Rollback
+import grails.gorm.transactions.Rollback
 import org.springframework.beans.factory.BeanCreationException
 import spock.lang.Specification
 
