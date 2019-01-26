@@ -17,7 +17,7 @@
 import test.book.Author
 import test.book.Book
 import grails.testing.mixin.integration.Integration
-import grails.transaction.Rollback
+import grails.gorm.transactions.Rollback
 import spock.lang.Specification
 
 import test.Uncle

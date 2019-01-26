@@ -15,8 +15,8 @@
  */
 package grails.plugin.fixtures.buildtestdata
 
-import org.springframework.beans.factory.FactoryBean
 import grails.buildtestdata.TestData
+import org.springframework.beans.factory.FactoryBean
 
 class BuildTestDataUtilisingFactoryBean implements FactoryBean {
 
@@ -26,7 +26,6 @@ class BuildTestDataUtilisingFactoryBean implements FactoryBean {
 	def overrideProperties
 
 	def getObject() {
-//		domainClass.buildWithoutSave(overrideProperties)
 		TestData.build([save: false], domainClass, overrideProperties)
 	}
 
