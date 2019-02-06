@@ -12,6 +12,6 @@ repositories {
 }
 
 dependencies {
-  compile 'org.grails.plugins:fixtures:3.0.4'
+  compile 'org.grails.plugins:fixtures3:3.0.4'
 }
 ```
