@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/gpc/grails-fixtures.svg?branch=master)](https://travis-ci.org/gpc/grails-fixtures)
-[ ![Download](https://api.bintray.com/packages/purpleraven/plugins/fixtures3/images/download.svg?version=3.0.4) ](https://bintray.com/purpleraven/plugins/fixtures3/3.0.4/link)
+
+[ ![Download](https://api.bintray.com/packages/purpleraven/plugins/fixtures3/images/download.svg?version=3.0.5) ](https://bintray.com/purpleraven/plugins/fixtures3/3.0.5/link)
 
 Grails Fixtures Plugin for Grails 3
 ===
@@ -12,6 +13,6 @@ repositories {
 }
 
 dependencies {
-  compile 'org.grails.plugins:fixtures3:3.0.4'
+  compile 'org.grails.plugins:fixtures3:3.0.5'
 }
 ```
