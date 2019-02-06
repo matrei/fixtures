@@ -3,7 +3,6 @@ package test.optionalowner
 import grails.testing.mixin.integration.Integration
 import grails.gorm.transactions.Rollback
 import spock.lang.*
-import test.optionalowner.OptionallyOwnedThing
 
 @Integration
 @Rollback

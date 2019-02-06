@@ -8,8 +8,7 @@ buildscript {
     }
 }
 
-//version "3.0-SNAPSHOT"
-version "3.0.0.RC2"
+version "3.0.3"
 group "org.grails.plugins"
 
 apply plugin:"eclipse"
@@ -20,6 +19,11 @@ apply plugin:"org.grails.grails-plugin-publish"
 repositories {
     mavenLocal()
     maven { url "https://repo.grails.org/grails/core" }
+}
+
+bintray {
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_KEY')
 }
 
 dependencies {
@@ -36,18 +40,18 @@ dependencies {
     testCompile "org.grails:grails-plugin-testing"
     testCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
 
-    provided "org.grails.plugins:build-test-data:3.3.0.RC2"
+    provided "org.grails.plugins:build-test-data:3.3.1"
 }
 
 task wrapper(type: Wrapper) {
     gradleVersion = gradleWrapperVersion
 }
 grailsPublish {
-    githubSlug = 'gpc/grails-fixtures'
+    githubSlug = 'purple-raven/fixtures'
     license {
         name = 'Apache-2.0'
     }
-    title = "Grails Fixtures Plugin"
+    title = "Grails 3 Fixtures Plugin"
     desc = "Load complex domain data via a simple DSL"
     developers = ["Grails Plugin Collective":"grails.plugin.collective@gmail.com"]
     portalUser = ""
@@ -55,20 +59,11 @@ grailsPublish {
 }
 
 jar {
-//    exclude "fixtures"
     exclude "grails/plugin/fixtures/test/**"
     exclude "test/**"
 }
-
-//def version = "1.3.1-SNAPSHOT"
-//def grailsVersion = "1.3 > *"
 
 //def documentation = "http://gpc.github.com/grails-fixtures/"
 
 //def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPFIXTURES" ]
 //def scm = [url: "https://github.com/gpc/grails-fixtures"]
-
-//
-//assets {
-//    packagePlugin = true
-//}
